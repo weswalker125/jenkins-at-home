@@ -5,11 +5,8 @@
 sudo groupadd docker
 sudo usermod -aGdocker wes
 
-# Get Jenkins image
-docker pull jenkinsci/jenkins:2.0-beta-2
-
 docker build -t jenkins-data -f Dockerfile-data .
-docker build -t jenkins2 .
+docker build -t jenkins .
 
 # Run 
 docker run --name=jenkins-data jenkins-data
