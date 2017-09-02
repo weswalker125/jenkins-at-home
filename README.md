@@ -18,6 +18,9 @@ docker exec jenkins-master cat /var/jenkins_home/secrets/initialAdminPassword
 
 Go to Jenkins at localhost:8080/
 
+## Bash shell into container
+docker exec -it jenkins-master bash
+
 
 ### References
 [DZone - Get Started with Jenkins 2.0 with Docker](https://dzone.com/articles/get-started-with-jenkins-20-with-docker)
