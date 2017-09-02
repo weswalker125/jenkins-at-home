@@ -10,7 +10,7 @@ docker build -t jenkins .
 
 # Run 
 docker run --name=jenkins-data jenkins-data
-docker run -p 8080:8080 -p 50000:50000 --name=jenkins-master --volumes-from=jenkins-data -d jenkins2
+docker run -p 8080:8080 -p 50000:50000 --name=jenkins-master --volumes-from=jenkins-data -d jenkins
 
 # Get initial admin password
 docker exec jenkins-master cat /var/jenkins_home/secrets/initialAdminPassword
